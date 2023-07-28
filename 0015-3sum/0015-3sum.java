@@ -9,12 +9,8 @@ class Solution {
            int j=i+1, k=nums.length-1;
            while(j < k ){
                int sum = addThree(nums[i],nums[j],nums[k]);
-               List<Integer> arr = new ArrayList<>();
                if(sum == 0){
-                    arr.add(nums[i]);
-                    arr.add(nums[j]);
-                    arr.add(nums[k]);
-                    triplets.add(arr);
+                   triplets.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     j++;
                     if(nums[j] == nums[j-1] && j < k) j++;
                 }else if( sum < 0){
