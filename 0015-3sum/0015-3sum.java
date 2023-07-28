@@ -10,7 +10,7 @@ class Solution {
            if(nums[i] > 0) 
                 return new ArrayList<>(triplets);
             
-           int j=i+1, k=nums.length-1;
+           int j = i+1, k = nums.length-1;
            
            while(j < k ){
               int sum = nums[i] + nums[j] + nums[k];
